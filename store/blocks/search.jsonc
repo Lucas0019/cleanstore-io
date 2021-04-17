@@ -21,5 +21,15 @@
       "filter-navigator.v3",
       "search-fetch-more"
     ]
+  },
+  "search-result-layout.mobile": {
+    "children": [
+      //Props    
+    ]
+  },
+  "search-not-found-layout": {
+    "children": [
+      //Props    
+    ]
   }
 }
