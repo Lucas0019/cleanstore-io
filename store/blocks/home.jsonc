@@ -4,7 +4,9 @@
       "rich-text",
       "info-card#button-right",
       "info-card#button-left",
-      "flex-layout.row"
+      "flex-layout.row",
+      "slider-layout#home"
+      
     ]
   },
   "flex-layout.row": {
