@@ -1,7 +1,9 @@
 // store/blocks/search.jsonc
 {
   "store.search": {
-    "blocks": ["search-result-layout"]
+    "blocks": [
+      "search-result-layout"
+    ]
   },
   "search-result-layout": {
     "blocks": [
@@ -14,22 +16,51 @@
     "children": [
       "breadcrumb.search",
       "search-title.v2",
-      "total-products.v2",
-      "order-by.v2",
+      "flex-layout.row#top",
+      // "order-by.v2",
       "search-fetch-previous",
+      "flex-layout.row#search",
+      "search-fetch-more"
+    ],
+    "props" : {
+      "pagination": "showMore"
+    }
+  },
+  "flex-layout.row#top": {
+    "children": [
+      "total-products.v2",
+      "order-by.v2"
+    ]
+  },
+  "search-result-layout.mobile" : {
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2",
+      "total-products.v2",
+      "search-fetch-previous",
+      "flex-layout.row#filters",
       "search-content",
-      "filter-navigator.v3",
       "search-fetch-more"
     ]
   },
-  "search-result-layout.mobile": {
-    "children": [
-      //Props    
+  "flex-layout.row#filters" : {
+    "children" : [
+      "filter-navigator.v3",
+      "order-by.v2"
     ]
   },
-  "search-not-found-layout": {
-    "children": [
-      //Props    
+  "flex-layout.row#search" : {
+    "children" : [
+      "flex-layout.col#filter-navigator",
+      "search-content"
     ]
+  },
+  "flex-layout.col#filter-navigator" : {
+    "children" : [
+      "filter-navigator.v3"
+    ],
+    "props" : {
+      "width": "20%"
+    }
   }
 }
